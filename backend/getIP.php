@@ -55,6 +55,18 @@ function getLocalOrPrivateIpInfo($ip)
         return 'link-local IPv4 access';
     }
 
+    // HAMNET OE
+    if (strpos($ip, '44.143.') === 0) {
+        return 'HAMNET OE';
+    }
+    // HAMNET IN3
+    if (strpos($ip, '44.134.') === 0) {
+        return 'HAMNET I';
+    }
+	// HAMNET DL
+    if (strpos($ip, '44.148.') === 0) {
+        return 'HAMNET DL';
+    }
     return null;
 }
 
